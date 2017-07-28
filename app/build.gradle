@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+android {
+  compileSdkVersion 26
+  buildToolsVersion "26.0.0"
+
+  defaultConfig {
+    minSdkVersion 14
+    applicationId "com.android.mediaserver"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+    }
+  }
+
+  dependencies {
+    compile 'com.jakewharton.timber:timber:4.5.1'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.okio:okio:1.13.0'
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    compile 'io.nlopez.smartlocation:library:3.3.1'
+    compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+    compile 'com.commonsware.cwac:wakeful:1.0.+'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.snatik:storage:2.1.0'
+    compile 'com.google.android.gms:play-services-maps:11.0.4'
+    compile 'io.kvh:amr:1.1.1'
+  }
+}
+
+dependencies {
+  implementation project(':simple-storage')
+}

